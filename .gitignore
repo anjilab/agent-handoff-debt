@@ -1,0 +1,28 @@
+# Python and virtual environments
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Generated experiment artifacts
+data/runs/
+data/experiments/
+data/repos/
+data/model_server_logs/
+data/prompt_debug/
+data/external/
+tasks/swebench_verified/*/workspace/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.log
+
+# Editor and operating system files
+.DS_Store
+.idea/
+.vscode/

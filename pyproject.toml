@@ -1,0 +1,38 @@
+[project]
+name = "handoff-debt"
+version = "0.1.0"
+description = "Harness for evaluating handoff debt in long-horizon coding agents."
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+license = {text = "MIT"}
+authors = [
+  {name = "Dipesh KC"},
+  {name = "Anjila Budathoki"},
+]
+keywords = ["coding agents", "software engineering", "SWE-bench", "agent handoff"]
+dependencies = [
+  "cairosvg>=2.9.0",
+  "litellm>=1.83.14",
+  "matplotlib>=3.10.9",
+  "openhands-sdk==1.19.0",
+  "openhands-tools==1.19.0",
+  "openhands-workspace==1.19.0",
+  "swebench>=4.1.0",
+]
+
+[project.urls]
+Repository = "https://github.com/anjilab/agent-handoff-debt"
+
+[project.scripts]
+handoff-debt = "handoff_debt.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
