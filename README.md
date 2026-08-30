@@ -110,9 +110,18 @@ templates/              SWE-bench/OpenHands prompt template
 selected_075.txt        Main-study source-task list
 ```
 
-## Citation
+## Citing this work
 
-See [`CITATION.cff`](CITATION.cff). Please cite the EMNLP 2026 paper when using this code or protocol.
+If you use this code or protocol, please cite our paper:
+
+```bibtex
+@article{kc2026handoff,
+  title={Handoff Debt: The Rediscovery Cost When Coding Agents Take Over Interrupted Tasks},
+  author={KC, Dipesh and Budathoki, Anjila},
+  journal={arXiv preprint arXiv:2606.02875},
+  year={2026}
+}
+```
 
 ## License
 
