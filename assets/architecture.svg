@@ -1,0 +1,374 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 780" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <filter id="ps" x="-2%" y="-2%" width="104%" height="106%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5"/>
+      <feOffset dx="0" dy="2" result="o"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.10"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="as" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.2"/>
+      <feOffset dx="0" dy="1.5" result="o"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.25"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="dg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#166534"/>
+    </marker>
+    <marker id="db" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#1e40af"/>
+    </marker>
+    <marker id="pp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#5b21b6"/>
+    </marker>
+  </defs>
+
+  <!-- ============== PANEL 1: PREDECESSOR RUN ============== -->
+  <g transform="translate(30,15)" filter="url(#ps)">
+    <rect x="0" y="0" width="520" height="750" rx="14" fill="#ffffff" stroke="#1e40af" stroke-width="2.5"/>
+
+    <!-- Header -->
+    <circle cx="30" cy="32" r="20" fill="#1e40af"/>
+    <text x="30" y="40" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">1</text>
+    <text x="62" y="40" fill="#1e3a8a" font-size="32" font-weight="700">Predecessor Run</text>
+
+    <!-- Coding task (square-code icon) -->
+    <rect x="10" y="64" width="500" height="92" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <g transform="translate(20,82) scale(1.7)" stroke="#1e40af" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 9.5 8 12l2 2.5"/>
+      <path d="m14 9.5 2 2.5-2 2.5"/>
+      <rect width="18" height="18" x="3" y="3" rx="2"/>
+    </g>
+    <text x="90" y="106" fill="#1e3a8a" font-size="26" font-weight="700">Coding task</text>
+    <text x="90" y="135" fill="#1e293b" font-size="20" font-weight="500">repository + failing tests</text>
+
+    <!-- Agent Run Phase (4 chips, no "agent") -->
+    <text x="14" y="184" fill="#1e3a8a" font-size="22" font-weight="700">Agent Run Phase</text>
+    <rect x="10" y="196" width="500" height="98" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+
+    <!-- chip 1: explore -->
+    <rect x="80" y="214" width="52" height="52" rx="11" fill="#dbeafe"/>
+    <g transform="translate(94,228)" stroke="#1e40af" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="0" y="0" width="24" height="24" rx="3"/>
+      <polyline points="7,8 11,12 7,16"/>
+      <line x1="13" y1="16" x2="17" y2="16"/>
+    </g>
+    <text x="106" y="284" text-anchor="middle" fill="#1e293b" font-size="18" font-weight="600">explore</text>
+    <line x1="136" y1="240" x2="180" y2="240" stroke="#1e40af" stroke-width="1.7" stroke-dasharray="6,4" marker-end="url(#db)"/>
+
+    <!-- chip 2: edit -->
+    <rect x="190" y="214" width="52" height="52" rx="11" fill="#dbeafe"/>
+    <g transform="translate(204,228)" stroke="#1e40af" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 3H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8"/>
+      <path d="m18 1.5 4 4-9 9H9v-4z"/>
+    </g>
+    <text x="216" y="284" text-anchor="middle" fill="#1e293b" font-size="18" font-weight="600">edit</text>
+    <line x1="246" y1="240" x2="290" y2="240" stroke="#1e40af" stroke-width="1.7" stroke-dasharray="6,4" marker-end="url(#db)"/>
+
+    <!-- chip 3: validate -->
+    <rect x="300" y="214" width="52" height="52" rx="11" fill="#dbeafe"/>
+    <g transform="translate(314,228)" stroke="#1e40af" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="11"/>
+      <polygon points="9,7 18,12 9,17"/>
+    </g>
+    <text x="326" y="284" text-anchor="middle" fill="#1e293b" font-size="18" font-weight="600">validate</text>
+    <line x1="356" y1="240" x2="400" y2="240" stroke="#1e40af" stroke-width="1.7" stroke-dasharray="6,4" marker-end="url(#db)"/>
+
+    <!-- chip 4: debug (now: search/magnifier) -->
+    <rect x="410" y="214" width="52" height="52" rx="11" fill="#dbeafe"/>
+    <g transform="translate(424,228)" stroke="#1e40af" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="10" cy="10" r="7"/>
+      <line x1="15" y1="15" x2="21" y2="21"/>
+    </g>
+    <text x="436" y="284" text-anchor="middle" fill="#1e293b" font-size="18" font-weight="600">debug</text>
+
+    <!-- Trajectory Evidence -->
+    <text x="14" y="326" fill="#1e3a8a" font-size="22" font-weight="700">Trajectory Evidence</text>
+
+    <!-- Commands -->
+    <rect x="10" y="338" width="500" height="78" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <g transform="translate(25,358) scale(1.2)" stroke="#1e40af" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="0" y="0" width="24" height="24" rx="3"/>
+      <polyline points="6,7 11,12 6,17"/>
+      <line x1="13" y1="16" x2="18" y2="16"/>
+    </g>
+    <text x="72" y="385" fill="#1e3a8a" font-size="19" font-weight="700">Commands</text>
+    <rect x="200" y="352" width="304" height="46" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <g font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#1e293b">
+      <text x="212" y="371">$ git status</text>
+      <text x="212" y="389">$ pytest -k test_foo</text>
+    </g>
+
+    <!-- File Edits -->
+    <rect x="10" y="426" width="500" height="138" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <g transform="translate(22,475) scale(1.5)" stroke="#1e40af" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+      <line x1="12" y1="13" x2="12" y2="18"/>
+      <line x1="9.5" y1="15.5" x2="14.5" y2="15.5"/>
+      <line x1="9.5" y1="10" x2="14.5" y2="10"/>
+    </g>
+    <text x="72" y="500" fill="#1e3a8a" font-size="19" font-weight="700">File Edits</text>
+    <rect x="200" y="436" width="304" height="116" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <g font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#1e293b">
+      <text x="210" y="454">diff --git a/foo.py</text>
+      <text x="210" y="472"> def foo(x):</text>
+      <text x="210" y="490" fill="#b91c1c" font-weight="600">−    return bar(x)</text>
+      <text x="210" y="508" fill="#15803d" font-weight="600">+    if x is None:</text>
+      <text x="210" y="526" fill="#15803d" font-weight="600">+        return None</text>
+      <text x="210" y="544"> ...</text>
+    </g>
+
+    <!-- Validation (file-check icon: outline file with green check) -->
+    <rect x="10" y="572" width="500" height="78" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <g transform="translate(22,594) scale(1.5)" stroke="#1e40af" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+      <path d="m9 15 2 2 4-4" stroke="#15803d" stroke-width="1.8"/>
+    </g>
+    <text x="72" y="619" fill="#1e3a8a" font-size="19" font-weight="700">Validations</text>
+    <rect x="200" y="586" width="304" height="50" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <g font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#1e293b">
+      <text x="210" y="604"><tspan fill="#b91c1c" font-weight="700">FAILED</tspan> tests/test_foo.py</text>
+      <text x="210" y="621">AssertionError: expected 42, got None</text>
+    </g>
+
+    <!-- Compact footer -->
+    <rect x="10" y="678" width="500" height="58" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <g transform="translate(22,694)" stroke="#1e40af" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="14" cy="5" rx="11" ry="3.5"/>
+      <path d="M3 5v22a11 3.5 0 0 0 22 0V5"/>
+      <path d="M3 16a11 3.5 0 0 0 22 0"/>
+    </g>
+    <text x="62" y="713" fill="#1e3a8a" font-size="18" font-weight="700">Creates partial work and evidence trail</text>
+  </g>
+
+  <!-- Arrow Panel 1 → Panel 2 (softer color) -->
+  <g transform="translate(553,388)" filter="url(#as)">
+    <path d="M 0 -8 L 17 -8 L 17 -18 L 36 0 L 17 18 L 17 8 L 0 8 Z" fill="#475569"/>
+  </g>
+
+  <!-- ============== PANEL 2: HANDOFF INTERFACE ============== -->
+  <g transform="translate(590,15)" filter="url(#ps)">
+    <rect x="0" y="0" width="520" height="750" rx="14" fill="#ffffff" stroke="#166534" stroke-width="2.5"/>
+
+    <circle cx="30" cy="32" r="20" fill="#166534"/>
+    <text x="30" y="40" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">2</text>
+    <text x="62" y="40" fill="#14532d" font-size="32" font-weight="700">Handoff Point and Views</text>
+
+    <!-- Detected handoff point (bigger icon: route) -->
+    <rect x="10" y="64" width="500" height="150" rx="10" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
+    <g transform="translate(20,82) scale(1.7)" stroke="#166534" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="6" cy="19" r="3" fill="#86efac"/>
+      <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
+      <circle cx="18" cy="5" r="3" fill="#86efac"/>
+    </g>
+    <text x="90" y="106" fill="#14532d" font-size="26" font-weight="700">Detected handoff point</text>
+    <text x="90" y="138" fill="#1e293b" font-size="20" font-weight="500">• after first source edit</text>
+    <text x="90" y="166" fill="#1e293b" font-size="20" font-weight="500">• after first validation result</text>
+    <text x="90" y="194" fill="#1e293b" font-size="20" font-weight="500">• after first post-failure edit</text>
+
+    <line x1="260" y1="224" x2="260" y2="254" stroke="#166534" stroke-width="2.4" stroke-dasharray="6,4" marker-end="url(#dg)"/>
+
+    <!-- Frozen repository (renamed, bigger icon) -->
+    <rect x="10" y="264" width="500" height="98" rx="10" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
+    <g transform="translate(20,282) scale(1.7)">
+      <rect x="3" y="11" width="20" height="14" rx="2.5" fill="#166534"/>
+      <path d="M7 11v-4a6 6 0 0 1 12 0v4" fill="none" stroke="#166534" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="13" cy="17" r="1.4" fill="#ffffff"/>
+      <line x1="13" y1="17.5" x2="13" y2="20.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+    <text x="90" y="298" fill="#14532d" font-size="26" font-weight="700">Frozen repository</text>
+    <text x="90" y="328" fill="#1e293b" font-size="20" font-weight="500">same files for all views</text>
+    <g transform="translate(376,302)">
+      <rect x="0" y="0" width="110" height="32" rx="16" fill="#e0f2fe" stroke="#0369a1" stroke-width="1.4"/>
+      <g transform="translate(8,5)" stroke="#0369a1" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="11" y1="2" x2="11" y2="20"/>
+        <line x1="2" y1="11" x2="20" y2="11"/>
+        <line x1="4.5" y1="4.5" x2="17.5" y2="17.5"/>
+        <line x1="17.5" y1="4.5" x2="4.5" y2="17.5"/>
+        <polyline points="8.5,3.5 11,2 13.5,3.5"/>
+        <polyline points="8.5,18.5 11,20 13.5,18.5"/>
+        <polyline points="3.5,8.5 2,11 3.5,13.5"/>
+        <polyline points="18.5,8.5 20,11 18.5,13.5"/>
+      </g>
+      <text x="69" y="22" text-anchor="middle" fill="#0369a1" font-size="13" font-weight="700">FROZEN</text>
+    </g>
+
+    <!-- Continuation context heading -->
+    <text x="260" y="395" text-anchor="middle" fill="#14532d" font-size="22" font-weight="700">Handoff view</text>
+
+    <!-- 4 view cards (bigger standalone icons) -->
+    <rect x="14" y="410" width="240" height="100" rx="11" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <g transform="translate(28,434) scale(1.5)" stroke="#1e40af" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/>
+    </g>
+    <text x="84" y="452" fill="#1e40af" font-size="19" font-weight="700">Repository only</text>
+    <text x="84" y="481" fill="#475569" font-size="18" font-weight="500">no prior context</text>
+
+    <rect x="266" y="410" width="240" height="100" rx="11" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+    <g transform="translate(280,434) scale(1.5)" stroke="#6d28d9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+      <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+      <line x1="6" y1="13" x2="14" y2="13"/>
+      <line x1="6" y1="17" x2="14" y2="17"/>
+      <line x1="6" y1="9" x2="10" y2="9"/>
+    </g>
+    <text x="336" y="452" fill="#6d28d9" font-size="19" font-weight="700">Raw trace</text>
+    <text x="336" y="481" fill="#475569" font-size="18" font-weight="500">event log</text>
+
+    <rect x="14" y="522" width="240" height="100" rx="11" fill="#ffffff" stroke="#fed7aa" stroke-width="1.5"/>
+    <g transform="translate(28,546) scale(1.5)" stroke="#c2410c" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 17V5a2 2 0 0 0-2-2H4"/>
+      <path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/>
+      <line x1="15" y1="12" x2="9" y2="12"/>
+      <line x1="15" y1="8" x2="9" y2="8"/>
+    </g>
+    <text x="84" y="564" fill="#c2410c" font-size="19" font-weight="700">Summary notes</text>
+    <text x="84" y="593" fill="#475569" font-size="18" font-weight="500">free-form notes</text>
+
+    <rect x="266" y="522" width="240" height="100" rx="11" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+    <g transform="translate(280,544) scale(1.5)" stroke="#0f766e" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2a2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1"/>
+      <path d="M19 21h1a2 2 0 0 0 2-2v-5a2 2 0 0 1 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/>
+    </g>
+    <text x="336" y="564" fill="#0f766e" font-size="19" font-weight="700">Structured notes</text>
+    <text x="336" y="593" fill="#475569" font-size="18" font-weight="500">fixed contract</text>
+
+    <!-- Compact footer (new icon: layers) -->
+    <rect x="10" y="678" width="500" height="58" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+    <g transform="translate(22,693)" stroke="#166534" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 3L2 9l12 6 12-6z"/>
+      <path d="M2 17l12 6 12-6"/>
+      <path d="M2 13l12 6 12-6"/>
+    </g>
+    <text x="62" y="713" fill="#14532d" font-size="18" font-weight="700">Freezes repository state; varies context</text>
+  </g>
+
+  <!-- Arrow Panel 2 → Panel 3 -->
+  <g transform="translate(1114,388)" filter="url(#as)">
+    <path d="M 0 -8 L 17 -8 L 17 -18 L 36 0 L 17 18 L 17 8 L 0 8 Z" fill="#475569"/>
+  </g>
+
+  <!-- ============== PANEL 3: TAKEOVER EVALUATION ============== -->
+  <g transform="translate(1150,15)" filter="url(#ps)">
+    <rect x="0" y="0" width="520" height="750" rx="14" fill="#ffffff" stroke="#6d28d9" stroke-width="2.5"/>
+
+    <circle cx="30" cy="32" r="20" fill="#6d28d9"/>
+    <text x="30" y="40" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">3</text>
+    <text x="62" y="40" fill="#4c1d95" font-size="32" font-weight="700">Takeover Evaluation</text>
+
+    <!-- Successor agent (bigger icon) -->
+    <rect x="10" y="64" width="500" height="160" rx="10" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+    <g transform="translate(20,82) scale(1.7)" stroke="#6d28d9" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 9V4h-5"/>
+      <rect width="18" height="13" x="2" y="9" rx="2.5"/>
+      <line x1="-1" y1="16" x2="2" y2="16"/>
+      <line x1="20" y1="16" x2="23" y2="16"/>
+      <line x1="7" y1="14" x2="7" y2="17"/>
+      <line x1="15" y1="14" x2="15" y2="17"/>
+    </g>
+    <text x="90" y="104" fill="#4c1d95" font-size="26" font-weight="700">Successor agent</text>
+    <text x="90" y="133" fill="#1e293b" font-size="20" font-weight="500">checkpointed repository + one view</text>
+
+    <rect x="34" y="152" width="56" height="56" rx="12" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+    <g transform="translate(48,168)" stroke="#1e40af" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M28 28a3 3 0 0 0 3-3V12a3 3 0 0 0-3-3H17a3 3 0 0 1-2.5-1.5L13 5a3 3 0 0 0-2.5-1.5H6a3 3 0 0 0-3 3V25a3 3 0 0 0 3 3Z"/>
+    </g>
+    <rect x="148" y="152" width="56" height="56" rx="12" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.5"/>
+    <g transform="translate(164,167)" stroke="#6d28d9" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 3H5a3 3 0 0 0-3 3v22a3 3 0 0 0 3 3h17a3 3 0 0 0 3-3V10Z"/>
+      <path d="M19 3v6a3 3 0 0 0 3 3h3"/>
+      <line x1="8" y1="17" x2="20" y2="17"/>
+      <line x1="8" y1="22" x2="20" y2="22"/>
+      <line x1="8" y1="27" x2="16" y2="27"/>
+    </g>
+    <rect x="262" y="152" width="56" height="56" rx="12" fill="#ffedd5" stroke="#fdba74" stroke-width="1.5"/>
+    <g transform="translate(278,168)" stroke="#c2410c" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M26 24V6.5A2.5 2.5 0 0 0 23.5 4H5"/>
+      <path d="M11 29h13a2.5 2.5 0 0 0 2.5-2.5v-1a1.5 1.5 0 0 0-1.5-1.5h-10a1.5 1.5 0 0 0-1.5 1.5v1a2.5 2.5 0 1 1-5 0V6.5a2.5 2.5 0 1 0-5 0v3a1.5 1.5 0 0 0 1.5 1.5H6"/>
+      <line x1="20" y1="17" x2="12" y2="17"/>
+      <line x1="20" y1="11" x2="12" y2="11"/>
+    </g>
+    <rect x="376" y="152" width="56" height="56" rx="12" fill="#ccfbf1" stroke="#5eead4" stroke-width="1.5"/>
+    <g transform="translate(394,168)" stroke="#0f766e" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 3H6a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1"/>
+      <path d="M14 21h1a2 2 0 0 0 2-2v-4a2 2 0 0 1 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/>
+    </g>
+
+    <line x1="260" y1="234" x2="260" y2="262" stroke="#6d28d9" stroke-width="2.4" stroke-dasharray="6,4" marker-end="url(#pp)"/>
+
+    <!-- Final patch (renamed, bigger icon) -->
+    <rect x="10" y="272" width="500" height="158" rx="10" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+    <g transform="translate(20,290) scale(1.7)" stroke="#6d28d9" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+      <polyline points="9,12 6,15 9,18"/>
+      <polyline points="15,12 18,15 15,18"/>
+    </g>
+    <text x="90" y="312" fill="#4c1d95" font-size="26" font-weight="700">Final patch</text>
+    <text x="90" y="340" fill="#1e293b" font-size="20" font-weight="500">edited repository</text>
+
+    <rect x="14" y="356" width="186" height="68" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <g font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#1e293b">
+      <text x="24" y="372">app/</text>
+      <text x="24" y="388">├ foo.py</text>
+      <text x="24" y="404">└ bar.py</text>
+      <text x="24" y="420">tests/</text>
+    </g>
+
+    <rect x="206" y="356" width="296" height="68" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <g font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13" fill="#1e293b">
+      <text x="216" y="372">diff --git a/foo.py</text>
+      <text x="216" y="388"> def foo(x):</text>
+      <text x="216" y="404" fill="#15803d" font-weight="600">+    if x is None:</text>
+      <text x="216" y="420" fill="#15803d" font-weight="600">+        return None</text>
+    </g>
+
+    <line x1="260" y1="440" x2="260" y2="468" stroke="#6d28d9" stroke-width="2.4" stroke-dasharray="6,4" marker-end="url(#pp)"/>
+
+    <!-- Official validation (compact metric labels) -->
+    <rect x="10" y="485" width="500" height="180" rx="10" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+    <g transform="translate(20,496) scale(1.7)">
+      <path d="M12 2l9 4v6c0 5-4 8-9 10c-5-2-9-5-9-10V6z" fill="#6d28d9" stroke="#4c1d95" stroke-width="1.5"/>
+      <polyline points="8,12 11,15 16,9" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="90" y="516" fill="#4c1d95" font-size="26" font-weight="700">Official validation</text>
+    <text x="90" y="544" fill="#1e293b" font-size="20" font-weight="500">resolved, tests preserved</text>
+
+    <!-- 3 metric chips: Solved (circle-check), Tokens (coins), Events (activity) -->
+    <g transform="translate(58,562)">
+      <rect x="0" y="0" width="66" height="66" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.5"/>
+      <g transform="translate(15,15) scale(1.5)" stroke="#6d28d9" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="m8 12 3 3 5-6"/>
+      </g>
+      <text x="33" y="90" text-anchor="middle" fill="#4c1d95" font-size="18" font-weight="700">Solved</text>
+    </g>
+    <g transform="translate(225,562)">
+      <rect x="0" y="0" width="66" height="66" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.5"/>
+      <g transform="translate(15,15) scale(1.5)" stroke="#6d28d9" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="8" cy="8" r="6"/>
+        <path d="M18.09 10.37A6 6 0 1 1 10.34 18.09"/>
+        <path d="M7 6h1v4"/>
+        <path d="m16.71 13.88.7.71-2.82 2.82"/>
+      </g>
+      <text x="33" y="90" text-anchor="middle" fill="#4c1d95" font-size="18" font-weight="700">Prompt tokens</text>
+    </g>
+    <g transform="translate(392,562)">
+      <rect x="0" y="0" width="66" height="66" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.5"/>
+      <g transform="translate(15,17) scale(1.5)" stroke="#6d28d9" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+      </g>
+      <text x="33" y="90" text-anchor="middle" fill="#4c1d95" font-size="18" font-weight="700">Events</text>
+    </g>
+
+    <!-- Compact footer -->
+    <rect x="10" y="678" width="500" height="58" rx="10" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+    <g transform="translate(22,694)" stroke="#6d28d9" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="26,8 16,18 11,13 2,22"/>
+      <polyline points="18,8 26,8 26,16"/>
+    </g>
+    <text x="62" y="713" fill="#4c1d95" font-size="18" font-weight="700">Measures continuation outcome and cost</text>
+  </g>
+</svg>
