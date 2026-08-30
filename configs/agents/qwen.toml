@@ -1,0 +1,7 @@
+[llm]
+model = "openai/Qwen/Qwen3.6-27B"
+base_url = "http://localhost:8000/v1"
+api_key = "EMPTY"
+max_iterations = 500
+conversation_timeout_seconds = 14400
+native_tool_calling = false

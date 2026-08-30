@@ -1,0 +1,7 @@
+[llm]
+model = "openai/mistralai/Devstral-Small-2-24B-Instruct-2512"
+base_url = "http://localhost:8000/v1"
+api_key = "EMPTY"
+max_iterations = 500
+conversation_timeout_seconds = 14400
+native_tool_calling = false
